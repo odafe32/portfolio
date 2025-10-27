@@ -1,0 +1,189 @@
+/* ========== THEME VARIABLES ========== */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1f2937;
+  --secondary-text: #6b7280;
+  --accent-color: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-light: #e0e7ff;
+  --badge-text: #4f46e5;
+  --modal-bg: #ffffff;
+  --overlay-bg: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] {
+  --bg-color: #111827;
+  --text-color: #f9fafb;
+  --secondary-text: #9ca3af;
+  --accent-color: #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-light: #312e81;
+  --badge-text: #a5b4fc;
+  --modal-bg: #1f2937;
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+}
+
+/* ========== MODAL STYLES ========== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--overlay-bg);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background-color: var(--modal-bg);
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 896px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: 0 16px;
+  padding: 32px;
+  position: relative;
+  color: var(--text-color);
+}
+
+/* Close button */
+.modal-close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--secondary-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.modal-close-button:hover {
+  color: #ef4444;
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Text content */
+.modal-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.modal-category {
+  font-size: 0.875rem;
+  color: var(--secondary-text);
+  margin-bottom: 16px;
+}
+
+.modal-description {
+  color: var(--text-color);
+  line-height: 1.625;
+  margin-bottom: 24px;
+}
+
+/* Role & Duration Grid */
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.modal-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--secondary-text);
+  margin-bottom: 4px;
+}
+
+.modal-value {
+  color: var(--text-color);
+}
+
+/* Section Titles */
+.modal-section-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--secondary-text);
+  margin-bottom: 8px;
+}
+
+/* Tech badges */
+.modal-tech-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.modal-tech-badge {
+  background-color: var(--accent-light);
+  color: var(--badge-text);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Features */
+.modal-features-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: var(--text-color);
+  margin-bottom: 24px;
+}
+
+.modal-features-list li {
+  margin-bottom: 4px;
+}
+
+/* Project Link Button */
+.modal-project-link {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.modal-project-link:hover {
+  background-color: var(--accent-hover);
+}
+
+.modal-project-link svg {
+  margin-right: 8px;
+}
+
+/* Scrollbar (light & dark) */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: var(--accent-light);
+  border-radius: 8px;
+}
