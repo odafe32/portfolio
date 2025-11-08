@@ -37,8 +37,8 @@ const AppBanner = () => {
             Full-Stack Developer
           </span>{" "}
           with a passion for crafting scalable web and mobile applications that
-          blend{" "}
-          <span className="text-purple-500 font-medium">performance</span> and{" "}
+          blend <span className="text-purple-500 font-medium">performance</span>{" "}
+          and{" "}
           <span className="text-purple-500 font-medium">beautiful design</span>.
           I love turning complex ideas into smooth digital experiences.
         </motion.p>
@@ -84,9 +84,9 @@ const AppBanner = () => {
         className="w-full sm:w-1/2 text-right float-right mt-10 sm:mt-0"
       >
         <img
-          src="dp.png"
+          src="odafe.png"
           alt="Godfrey Joseph - Full Stack Developer"
-          className="w-full max-w-md mx-auto sm:mx-0 rounded-2xl shadow-lg"
+          className="w-full max-w-md mx-auto sm:mx-0 rounded-3xl "
         />
       </motion.div>
     </motion.section>
