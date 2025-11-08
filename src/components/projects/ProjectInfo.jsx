@@ -21,18 +21,19 @@ const ProjectInfo = () => {
 										key={info.id}
 									>
 										<span>{info.title}: </span>
-										<a
-											href=""
-											className={
-												info.title === 'Website' ||
-												info.title === 'Phone'
-													? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
-													: ''
-											}
-											aria-label="Project Website and Phone"
-										>
-											{info.details}
-										</a>
+										{info.title === 'Website' && info.details ? (
+											<a
+												href={info.details}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
+												aria-label="Project Website"
+											>
+												{info.details}
+											</a>
+										) : (
+											<span>{info.details}</span>
+										)}
 									</li>
 								);
 							}

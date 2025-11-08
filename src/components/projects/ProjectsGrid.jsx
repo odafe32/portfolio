@@ -12,7 +12,6 @@ const ProjectsGrid = () => {
     setSearchProject,
     searchProjectsByTitle,
     selectProject,
-    setSelectProject,
     selectProjectsByCategory,
   } = useContext(ProjectsContext);
 
